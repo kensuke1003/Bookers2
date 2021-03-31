@@ -9,6 +9,7 @@ class BookCommentsController < ApplicationController
       redirect_to book_path(@book)
     else
       @booker = @book.user
+      # ↑なんで？
       @user = current_user
       render 'books/show'
     end
